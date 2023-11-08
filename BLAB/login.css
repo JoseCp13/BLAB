@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formu {
+  width: 90vh;
+  height: 100vh;
+  position: absolute;
+}
+
+.imagen {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 115vh;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 616px;
+  height: 574px;
+  background-color: rgba(255, 255, 255, 0.19);
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.logo img {
+  margin-top: -20px;
+  max-width: 100%;
+}
+
+.redondo {
+  width: 20px; /* Ancho del div redondo */
+  height: 20px; /* Alto del div redondo */
+  background-color: rgb(255, 255, 255); /* Color de fondo del div redondo */
+  border-radius: 50%; /* Hace que el div sea redondo */
+  position: absolute;
+  top: 10px; /* Lo posiciona arriba */
+  left: 10px; /* Lo posiciona a la izquierda */
+}
+
+.formu p {
+  display: block; /* Cambia el comportamiento a bloque para que estén uno debajo del otro */
+  margin-bottom: 4vh;
+  color: rgba(0, 0, 0, 0.530);
+}
+
+.formu span:first-child {
+  font-weight: bold; /* Estilo opcional para el elemento <span> dentro del título */
+}
+
+.texto{
+
+    width: 70vh;
+    height: auto;
+    padding: 8vh 8vh 8vh 8vh;
+    margin-top: 4vh;
+}
+
+
+form input{
+  width: 260px;
+  height: 30px;
+  box-shadow: 1px 3px 2px 3px rgba(0, 0, 0, 0.397) ;
+  border: none;
+  border-left: 4px solid #123330;
+  background-color: rgb(230, 230, 230);
+}
+
+
+form input:first-child{
+  margin-top: 4vh;
+}
+
+#boton{
+  width: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+label{
+  position: relative;
+  margin-right: 10vh;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  width:370px;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+#login{
+  width: 150px;
+  height: 45px;
+  border: none;
+  color: white;
+  background-color: #123330;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#registro{
+  width: 150px;
+  height: 45px;
+  border: none;
+  color: black;
+  background-color: white;
+  border: 1.5px solid black;
+  margin-left: 3vh;
+  margin-bottom: 4vh;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#recuerda{
+  color: rgba(0, 0, 0, 0.530);
+}
