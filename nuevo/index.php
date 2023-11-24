@@ -1,10 +1,17 @@
 <?php
 
+
+
+session_start();
+
 require_once "vendor/autoload.php";
 require_once "./src/config/config.php";
 
+
 $url = $_GET['url'] ?? 'Login';
 $url = explode('/', $url);
+
+
 if (isset($url[0])) {
     $NOMBRE_CONTROLADOR = ucfirst($url[0]) . 'Controller';
 } elseif (!isset($url[0]) && !isset($url[1])) {

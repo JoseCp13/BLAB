@@ -9,15 +9,15 @@ class Render
 {
     public function obtener():array
     {
-        $loginUser = new Loginuser();
-        $result = $loginUser->login();
-        
-        $nombre = $result->getNombre();
-        $nomUsr = $result->getNomUsr();
+
+        $nombre = $_SESSION['usuario'][0]['Nombre'];
+        $nomUsr = $_SESSION['usuario'][0]['NomUsr'];
+        $idusr = $_SESSION['usuario'][0]['IdUser'];
 
         $array = [
             'nombre' => $nombre,
             'nomusr' => $nomUsr,
+            'idusr'=>$idusr
         ];
 
 

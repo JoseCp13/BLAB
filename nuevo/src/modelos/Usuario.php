@@ -12,6 +12,8 @@ class Usuario
     private $Nombre;
     private $Apellidos;
 
+
+
     public function __construct()
     {
     }
@@ -57,5 +59,4 @@ class Usuario
     {
         return $this->Password;
     }
-
 }

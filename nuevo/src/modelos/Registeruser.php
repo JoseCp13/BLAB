@@ -21,7 +21,7 @@ class RegisterUser
 
 
         $usr = $db->prepare("INSERT INTO User(IdUser,Email, Password, NomUsr, NumeroTel, Localidad, Nombre, Apellidos)
-VALUES(3,:email, :pass, :user ,:tel,:loca,:nom,:ape);");
+VALUES(5,:email, :pass, :user ,:tel,:loca,:nom,:ape);");
 
         $usr->bindParam(':user', $user, PDO::PARAM_STR);
         $usr->bindParam(':pass', $pass, PDO::PARAM_STR);
@@ -33,6 +33,10 @@ VALUES(3,:email, :pass, :user ,:tel,:loca,:nom,:ape);");
 
         $usr->execute();
 
+        $result = $usr->fetchObject("Root\Html\modelos\Usuario");
+
         $db = null;
+
+        return $result;
     }
 }

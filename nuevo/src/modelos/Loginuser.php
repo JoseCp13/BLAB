@@ -8,25 +8,23 @@ use \PDO;
 
 class Loginuser
 {
-    public function login()
-    {   
-        $db = Database::getConnection();
+    public function login($user, $pass)
+    {
 
-        $user = $_POST['user'];
-        $pass = $_POST['contra'];
 
-        $usr = $db->prepare("SELECT * FROM User WHERE NomUsr=:user AND Password=:pass ");
+        $usr = Database::getConnection()->prepare("SELECT * FROM User WHERE NomUsr=:user AND Password=:pass ");
         $usr->bindParam(':user', $user, PDO::PARAM_STR);
-        $usr->bindParam(':pass' , $pass,  PDO::PARAM_STR);
+        $usr->bindParam(':pass', $pass,  PDO::PARAM_STR);
         $usr->execute();
 
-        $result = $usr->fetchObject("Root\Html\modelos\Usuario");
+        $result = $usr->fetchAll(PDO::FETCH_ASSOC);
 
+        if (count($result) >= 1) {
+            $_SESSION["usuario"] =  $result;
+            return true;
+        }
 
-
-        $db = null;
+        return false;
         
-        return $result;
-
     }
 }

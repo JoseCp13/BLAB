@@ -18,15 +18,53 @@
 
 	<body>
 		<div class="perfil">
+			<form action="../Cerrars/cerrarSesion" method="post">
+				<button type="submit" id="botper"><img id="salir" width="45" height="45" src="https://img.icons8.com/glyph-neue/64/exit--v1.png" alt="exit--v1" style="position: absolute;z-index: 1;bottom: 1rem;right: 0;"/></button>
+			</form>
+
 			<div class="img"></div>
 			<h3>{{nombre}}</h3>
 			<h4>@{{nomusr}}</h4>
+
+
+			<form action="../Perfil/perfil" method="post">
+				<button type="submit" id="botper">Profile</button>
+			</form>
+
+			<h3 id="fri">Friends</h3>
 			<div class="amigos">
-				
+				{% for usuario in usuariosSinAgregar %}
+					<div class="agregar">
+						<div class="container-img">
+							<div class="imgusr"></div>
+						</div>
+						<div class="container-texto">
+							<form action="../perfilami/perfilami" method="post" style="width:100px">
+								<button type="submit" id="nom">
+									<h1 style="color: white;
+										  font-family: " segoe ui", tahoma, geneva, verdana, sans-serif;
+										  font-weight: bold;
+										  margin: 0;
+										  font-size: 15px;">{{ usuario.Nombre|upper }}</h1>
+										  <input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
+								</button>
+							</form>
+							<p>@{{ usuario.NomUsr }}</p>
+						</div>
+
+						<div class="anadir">
+							<form action="../Anadido/agregado" method="post">
+								<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
+								<button type="submit">Añadir</button>
+							</form>
+						</div>
+					</div>
+				{% endfor %}
 			</div>
 
-
 		</div>
+
+
 		<div class="principal">
 			<div class="sub">
 				<div class="container-publi">
@@ -38,18 +76,32 @@
 				</div>
 
 				<div class="gru">
-					<div class="grupos"></div>
-					<div class="grupos"></div>
-				</div>
 
-				<div class="gru">
-					<div class="grupos"></div>
-					<div class="grupos"></div>
+
+					{%for grupo in ArrayGrupos %}
+						<div class="grupos">
+							<div class="contenido">
+								<div class="texto">
+									<h1>{{grupo.NombreCom}}</h1>
+									<p>Community dedicated to all types of sports, share your routines or stay among yourselves</p>
+									<p>{{grupo.Members}}
+										Members</p>
+								</div>
+
+								<div class="anadirgru">
+									<form action="../Grupos/grupos" method="post">
+										<input type="hidden" name="IdComunidad" value="{{ grupo.IdComunidad }}"/>
+										<button type="submit">Entrar</button>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					{% endfor %}
+
+
 				</div>
 			</div>
-		</div>
-
-
+		</body>
 	</body>
-
 </html>

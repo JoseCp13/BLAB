@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=1, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="../src/vistas/css/perfil.css">
+	</head>
+
+	<body>
+		<div class="perfil">
+			<form action="../login/renderizado" method="post">
+				<button type="submit" id="atras"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/circled-left-2.png" alt="circled-left-2"/></button>
+			</form>
+
+			<div class="img"></div>
+			<div class="container-texto">
+				<h1>{{ nombre }}</h1>
+				<p>@{{ nomusr }}</p>
+			</div>
+		</div>
+
+		<div class="principal">
+
+			<div class="comunidad">
+				<div class="comtex">
+					<h3>Community</h3>
+				</div>
+
+				{% for grupo in ArrayGrupos %}
+					<div class="grupos">
+						<div class="contenido">
+							<div class="texto">
+								<h1>{{grupo.NombreCom}}</h1>
+								<p>{{grupo.Members}}
+									Members</p>
+							</div>
+
+							<div class="anadirgru">
+								<form action="../Eliminar/eliminarg" method="post">
+									<input type="hidden" name="IdComunidad" value="{{ grupo.IdComunidad }}"/>
+									<button type="submit">Salir</button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+
+			<div class="amigos">
+				<div class="amitex">
+					<h3>Friends</h3>
+				</div>
+
+				{% for usuario in usuariosAgregados  %}
+
+					<div class="agregar">
+						<div class="container-img">
+							<div class="imgusr"></div>
+						</div>
+						<div class="container-texto">
+							<form action="../perfilami/perfilami" method="post" style="width:100px;margin-inline-start: -0.5rem;
+									">
+								<button type="submit" id="nom">
+									<h1 style="color: white;
+																				  font-family: " segoe ui", tahoma, geneva, verdana, sans-serif;
+																				  font-weight: bold;
+																				  margin: 0;
+																				  font-size: 15px;">{{ usuario.Nombre|upper }}</h1>
+									<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
+								</button>
+							</form>
+							<p>@{{ usuario.NomUsr }}</p>
+						</div>
+
+						<div class="anadir">
+							<form action="../Eliminar/eliminara" method="post">
+								<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
+								<button type="submit">Eliminar</button>
+							</form>
+						</div>
+					</div>
+
+				{% endfor %}
+			</div>
+
+
+		</div>
+	</body>
+
+</html>
+
+
+<!-- <div class="amigos">
+            {% for usuario in usuariosSinAgregar %}
+					<div class="agregar">
+						<div class="container-img">
+							<div class="imgusr"></div>
+						</div>
+						<div class="container-texto">
+							<h1>{{ usuario.Nombre|upper }}</h1>
+							<p>@{{ usuario.NomUsr }}</p>
+						</div>
+
+						<div class="anadir">
+							<form action="../Anadido/agregado" method="post">
+								<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
+								<button type="submit">Añadir</button>
+							</form>
+						</div>
+					</div>
+				{% endfor %}
+        </div> -->
