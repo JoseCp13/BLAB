@@ -9,8 +9,8 @@ Actualizacion Semanal:
 
   Semana 2 (17/11/2023): Restructuración del proyecto apilicando MVC, creacion de nuevos controladores y modelos, gestionamos plantilla de home page con twig y se obtenemos los datos del usuario           
   correctamente.
-  
 
-  Objetivo para la proxima semana (24/11/2023): Realizar la funcion de agregar usuarios y entrar en grupos y realizar pagina del perfil del usuario.
+  Semana 3 (24/11/2023): Realizado la funcion de agregar usuario y añadirte a grupos, perfil de usuario y perfil de amigos, tambien añadida la función de eliminar a un amigo o salirse de la commundad en la que estas
+
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
