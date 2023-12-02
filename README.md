@@ -1,6 +1,38 @@
-# BLAB
+# BLAB v1.0
 Proyecto primer trimestre php
+Realizado por José Manuel Carazo Puga
 
+Descripción: 
+
+# Bienvenido a Blab: Tu Espacio Social Conectado
+
+Blab es un proyecto personal , el cual es una red social, dicha red social nos permite:
+
+Login:
+Nos permite Logearnos con nuestro perfil
+
+
+Register:
+Nos permite crear multitud de perfiles a nuestro gusto (Actualmente no podemos agregar fotos, se realizara en la version 1.1)
+
+
+Home:
+Dentro del Home podremos ver los grupos en los cuales no estamos actulmente dentro y los miembros que hay actualmente, y tambien podemos ver los amigos que podemos añadir
+
+
+Perfil: 
+Nos permite ver nuestro perfil con los amigos que tenemos añadidos y en los grupos que estamos, tambien nos permite eliminar amigos y grupos
+
+
+Perfil externo:
+Podemos ver los perfiles de los otros usuarios
+
+
+
+
+
+
+PD: El apartado de añadir post no se ha podido realizar debido a falta de tiempo. Mil disculpas
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Actualizacion Semanal:
 
