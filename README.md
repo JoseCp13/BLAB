@@ -11,25 +11,30 @@ Blab es un proyecto personal , el cual es una red social, dicha red social nos p
 Login:
 Nos permite Logearnos con nuestro perfil
 
-https://github.com/JoseCp13/BLAB/assets/72097716/0f8de2cc-010a-4fad-b088-a216e18dbe64
+![2023-12-05-15-51-38](https://github.com/JoseCp13/BLAB/assets/72097716/d1db4c70-954b-4a04-b40a-91eb92735831)
 
 
 Register:
 Nos permite crear multitud de perfiles a nuestro gusto (Actualmente no podemos agregar fotos, se realizara en la version 1.1)
 
+![2023-12-05-16-49-48](https://github.com/JoseCp13/BLAB/assets/72097716/4cd67100-7884-43ac-b7a1-e06761c5ba50)
+
 
 Home:
 Dentro del Home podremos ver los grupos en los cuales no estamos actulmente dentro y los miembros que hay actualmente, y tambien podemos ver los amigos que podemos añadir
+
+![2023-12-05-16-55-04](https://github.com/JoseCp13/BLAB/assets/72097716/735a4044-868b-4d93-9ccf-27184fb1d4ec)
 
 
 Perfil: 
 Nos permite ver nuestro perfil con los amigos que tenemos añadidos y en los grupos que estamos, tambien nos permite eliminar amigos y grupos
 
+![2023-12-05-16-55-43](https://github.com/JoseCp13/BLAB/assets/72097716/1c61cdee-77ab-471e-9c93-4e3848b1a11d)
 
 Perfil externo:
 Podemos ver los perfiles de los otros usuarios
 
-
+![2023-12-05-16-56-43](https://github.com/JoseCp13/BLAB/assets/72097716/8ff186ea-ab78-426b-b678-ef51429d102a)
 
 
 
