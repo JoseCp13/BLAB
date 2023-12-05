@@ -11,6 +11,8 @@ Blab es un proyecto personal , el cual es una red social, dicha red social nos p
 Login:
 Nos permite Logearnos con nuestro perfil
 
+https://github.com/JoseCp13/BLAB/assets/72097716/0f8de2cc-010a-4fad-b088-a216e18dbe64
+
 
 Register:
 Nos permite crear multitud de perfiles a nuestro gusto (Actualmente no podemos agregar fotos, se realizara en la version 1.1)
