@@ -24,7 +24,6 @@ if (isset($url[0])) {
 }
 
 $controladorClassName = "Root\\Html\\controladores\\" . $NOMBRE_CONTROLADOR;
-
 if (class_exists($controladorClassName)) {
     $controlador = new $controladorClassName();
     if (isset($url[1]) && method_exists($controlador, $url[1])) {

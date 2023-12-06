@@ -21,18 +21,10 @@ class RegistroController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $crearusr= new RegisterUser();
-            $regis =  $crearusr->registrado();
+            $crearusr->registrado();
+            
+            header("Location: " .BASE_URL);
 
-            $datos = new Render;
-            $array = $datos->obtener();
-
-
-            $loader = new FilesystemLoader('./src/vistas');
-            $twig = new Environment($loader);
-
-            // Renderizar la plantilla con Twig
-            $template = $twig->load('home.php.twig');
-            echo $template->render($array);
             exit();
         } else {
 

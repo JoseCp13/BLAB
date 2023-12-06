@@ -18,8 +18,8 @@
 
 	<body>
 		<div class="perfil">
-			<form action="../Cerrars/cerrarSesion" method="post">
-				<button type="submit" id="botper"><img id="salir" width="45" height="45" src="https://img.icons8.com/glyph-neue/64/exit--v1.png" alt="exit--v1" style="position: absolute;z-index: 1;bottom: 1rem;right: 0;"/></button>
+			<form id="cerrar" action="../Cerrars/cerrarSesion" method="post">
+				<button type="submit" style="background:none; border:none"><img id="salir" width="45" height="45" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOklEQVR4nO2ZQUoDQRBFP8wJZq+rRMRzjEcxYFbeJLmHhKzVa8SdN1AjJotknKrmS8NkJQyB6XZSoT7U/r+u3z01FOBy5RPJyyboolHZSlDmqkZl2wRd1uR1WvMq65zG5S/ImuRFEoB48v9pXg4QQR/TAGSOTUcXNkkAhjAvbTlAlHcgeIT6ySMUzjhCd5MJd/XeLkCcVKqq4vvnh12AWKPxmKvXlV0AACzLkk8vz3YBALAoCs7mM7sAaOtwuc0CoL3cAMrsAF0mEtQbgBvLAATwBeDWMgABKIAHBxCPEE7vEov1Z1T8Q4bzGCVMD3Mjy+O06R+a++mU+5+6C/C0AY7oUH85QPAO9JNHKHiEzK6YvtMABF0OAhB0kQQg7myHWLPW5BVSKe5s49ozbg4zG9/Ek09q3uXCUfoFZznFAJvjaQIAAAAASUVORK5CYII=" alt="exit--v1" style="position: absolute;z-index: 1;bottom: 2rem;right: 0; color:white;"/></button>
 			</form>
 
 			<div class="img"></div>
@@ -55,7 +55,7 @@
 						<div class="anadir">
 							<form action="../Anadido/agregado" method="post">
 								<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
-								<button type="submit">Añadir</button>
+								<button type="submit" id="butami">Añadir</button>
 							</form>
 						</div>
 					</div>
@@ -84,14 +84,14 @@
 								<div class="texto">
 									<h1>{{grupo.NombreCom}}</h1>
 									<p>Community dedicated to all types of sports, share your routines or stay among yourselves</p>
-									<p>{{grupo.Members}}
+									<p id="Members">{{grupo.Members}}
 										Members</p>
 								</div>
 
 								<div class="anadirgru">
 									<form action="../Grupos/grupos" method="post">
 										<input type="hidden" name="IdComunidad" value="{{ grupo.IdComunidad }}"/>
-										<button type="submit">Entrar</button>
+										<button type="submit" id="entrar">Entrar</button>
 									</form>
 								</div>
 

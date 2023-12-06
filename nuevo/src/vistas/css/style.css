@@ -67,9 +67,9 @@
   background-color: black;
 }
 
-.img {
-  width: 15vh;
-  height: 15vh;
+.img{
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: black;
 }
@@ -116,7 +116,6 @@
 }
 
 .texto {
-  width: 70%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin-left: 30px;
@@ -125,12 +124,33 @@
 .texto p,
 h1 {
   margin: 0;
+}
+
+#Members{
   margin-top: 10px;
 }
 
-.texto h1 {
-  margin-top: 25px;
+#entrar {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+#entrar:hover {
+  background-color: rgba(21, 26, 21, 0.986);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+
 
 .anadirgru {
   display: flex;
@@ -146,10 +166,14 @@ h1 {
 }
 
 .gru {
-  width: auto;
-  height: auto;
-  display: flex;
-  margin-top: 4rem;
+  width: 80%; /* Puedes ajustar este valor según tus necesidades */
+  max-width: 1200px; /* Agregué un valor máximo para limitar el ancho máximo del contenedor */
+  margin: 0 auto; /* Esto centra el contenedor en la pantalla */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 body {
@@ -167,19 +191,31 @@ body {
 
 .principal {
   width: 100rem;
-  height: 100vh;
+  height: auto;
   background-image: linear-gradient(black, 60%, rgb(35, 59, 57));
 }
 
-#botper {
-  width: 3rem;
-  height: 3rem;
+#botper{
+  width: 4rem;
+  height: 2rem;
   border: none;
-  background: none;
+  background: rgba(211, 211, 211, 0.459);
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 12px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
 }
+
+#botper:hover {
+  background-color: #000000; /* Cambia el color de fondo al pasar el mouse */
+  color: white;
+}
+
+#botper:active {
+  transform: scale(0.9); /* Añade una animación de escala al hacer clic */
+}
+
 
 
 
@@ -200,4 +236,27 @@ body {
   border-radius: 10px;
   font-size: 10px;
   cursor: pointer;
+}
+
+
+#butami{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#butami:hover{
+  background-color: rgba(21, 26, 21, 0.986);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
 }

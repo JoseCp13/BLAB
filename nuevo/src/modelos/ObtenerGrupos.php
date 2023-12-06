@@ -15,7 +15,7 @@ class ObtenerGrupos{
         $grup = Database::getConnection()->prepare("SELECT Comunidad.*
         FROM Comunidad
         LEFT JOIN Esta ON Comunidad.IdComunidad = Esta.IdComunidad AND Esta.IdUser = :usuario
-        WHERE Esta.IdUser IS NULL;");
+        WHERE Esta.IdUser IS NULL LIMIT 5");
         $grup->bindParam(':usuario', $userId, PDO::PARAM_INT);
         $grup->execute();
 

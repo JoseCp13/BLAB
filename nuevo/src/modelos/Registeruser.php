@@ -20,8 +20,8 @@ class RegisterUser
         $ape = $_POST['apelli'];
 
 
-        $usr = $db->prepare("INSERT INTO User(IdUser,Email, Password, NomUsr, NumeroTel, Localidad, Nombre, Apellidos)
-VALUES(5,:email, :pass, :user ,:tel,:loca,:nom,:ape);");
+        $usr = $db->prepare("INSERT INTO User(Email, Password, NomUsr, NumeroTel, Localidad, Nombre, Apellidos)
+VALUES(:email, :pass, :user ,:tel,:loca,:nom,:ape);");
 
         $usr->bindParam(':user', $user, PDO::PARAM_STR);
         $usr->bindParam(':pass', $pass, PDO::PARAM_STR);

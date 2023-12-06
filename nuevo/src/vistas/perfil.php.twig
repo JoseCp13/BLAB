@@ -40,7 +40,7 @@
 							<div class="anadirgru">
 								<form action="../Eliminar/eliminarg" method="post">
 									<input type="hidden" name="IdComunidad" value="{{ grupo.IdComunidad }}"/>
-									<button type="submit">Salir</button>
+									<button type="submit" id="Salir">Salir</button>
 								</form>
 							</div>
 
@@ -78,7 +78,7 @@
 						<div class="anadir">
 							<form action="../Eliminar/eliminara" method="post">
 								<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
-								<button type="submit">Eliminar</button>
+								<button type="submit" id="elimi">Eliminar</button>
 							</form>
 						</div>
 					</div>
@@ -91,25 +91,3 @@
 	</body>
 
 </html>
-
-
-<!-- <div class="amigos">
-            {% for usuario in usuariosSinAgregar %}
-					<div class="agregar">
-						<div class="container-img">
-							<div class="imgusr"></div>
-						</div>
-						<div class="container-texto">
-							<h1>{{ usuario.Nombre|upper }}</h1>
-							<p>@{{ usuario.NomUsr }}</p>
-						</div>
-
-						<div class="anadir">
-							<form action="../Anadido/agregado" method="post">
-								<input type="hidden" name="idUsuario" value="{{ usuario.IdUser }}"/>
-								<button type="submit">Añadir</button>
-							</form>
-						</div>
-					</div>
-				{% endfor %}
-        </div> -->

@@ -7,6 +7,7 @@ use Root\Html\modelos\AmigosSing;
 
 class AmigosController {
     public function obtenerUsuarioSinAgregar($userId){
+        
         $noagre = new AmigosSing();
         $usuariosNoAgregados = $noagre->obtenerUsuariosNoAgregados($userId);
 

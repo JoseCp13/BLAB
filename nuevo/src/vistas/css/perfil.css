@@ -144,6 +144,7 @@ body {
   background-image: url(../imagenes/grupog.jpeg);
   background-size: 100%;
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .contenido {
@@ -154,7 +155,6 @@ body {
 }
 
 .texto {
-  width: 70%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin-left: 30px;
@@ -163,13 +163,9 @@ body {
 .texto p,
 h1 {
   margin: 0;
-  margin-top: 10px;
   color: black;
 }
 
-.texto h1 {
-  margin-top: 25px;
-}
 
 .anadirgru {
   display: flex;
@@ -207,3 +203,45 @@ h1 {
   cursor: pointer;
 }
 
+
+#Salir{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#Salir:hover{
+  background-color: rgba(21, 26, 21, 0.986);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+#elimi{
+  display: inline-block;
+  font-size: 16px;
+  width: auto;
+  height: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#elimi:hover{
+  background-color: rgba(21, 26, 21, 0.986);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}

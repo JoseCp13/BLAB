@@ -5,7 +5,7 @@ namespace Root\Html\controladores;
 
 use Root\Html\modelos\Render;
 use Root\Html\modelos\GrupoAgregado;
-use Root\Html\modelos\UsuarioAgregado;
+use Root\Html\modelos\Obteneramiot;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
@@ -20,9 +20,9 @@ class PerfilController{
 
         $arrayg = $grup->grupog($userid);
 
-        $ami = new UsuarioAgregado();
+        $ami = new Obteneramiot();
 
-        $amigosag = $ami->agregados($userid);
+        $amigosag = $ami->obtener($userid);
 
         $loader = new FilesystemLoader('./src/vistas');
         $twig = new Environment($loader);

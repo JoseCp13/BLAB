@@ -14,7 +14,7 @@ class EliminarGrupo
             $stmt->execute([$userid, $grupoid]);
 
 
-            $stmtUpdate = Database::getConnection()->prepare("UPDATE Comunidad SET Members = Members - 1");
+            $stmtUpdate = Database::getConnection()->prepare("UPDATE Comunidad SET Members = Members - 1 WHERE IdComunidad = $grupoid");
             $stmtUpdate->execute();
         } else {
 

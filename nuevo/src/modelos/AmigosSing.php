@@ -7,18 +7,17 @@ use \PDO;
 
 class AmigosSing
 {
-    public function obtenerUsuariosNoAgregados()
+    public function obtenerUsuariosNoAgregados($userid)
     {
-        // Obtenemos el ID del usuario de la sesión
-        $userId = $_SESSION['usuario'][0]['IdUser'];
+
         
 
-        $sql = "SELECT u.* FROM User u WHERE u.IdUser <> $userId 
+        $sql = "SELECT u.* FROM User u WHERE u.IdUser <> $userid 
                 AND NOT EXISTS (
                     SELECT 1 FROM Agrega a 
-                    WHERE (u.IdUser = a.IdUser_1 AND a.AgregaIdUser_2 = $userId) 
-                    OR (u.IdUser = a.AgregaIdUser_2 AND a.IdUser_1 = $userId)
-                )";
+                    WHERE (u.IdUser = a.IdUser_1 AND a.AgregaIdUser_2 = $userid) 
+                    OR (u.IdUser = a.AgregaIdUser_2 AND a.IdUser_1 = $userid)
+                ) LIMIT 4";
 
         $result = Database::getConnection()->query($sql);
        
