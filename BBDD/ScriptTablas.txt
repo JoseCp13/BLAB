@@ -1,0 +1,38 @@
+CREATE TABLE User
+(
+  IdUser INT AUTO_INCREMENT NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  Password VARCHAR(255) NOT NULL,
+  NomUsr CHAR(70) NOT NULL,
+  NumeroTel INT NOT NULL,
+  Localidad VARCHAR(255) NOT NULL,
+  Nombre VARCHAR(255) NOT NULL,
+  Apellidos VARCHAR(255) NOT NULL,
+  PRIMARY KEY (IdUser)
+);
+
+CREATE TABLE Comunidad
+(
+  IdComunidad INT AUTO_INCREMENT NOT NULL,
+  Categoria VARCHAR(255) NOT NULL,
+  NombreCom VARCHAR(255) NOT NULL,
+  PRIMARY KEY (IdComunidad)
+);
+
+CREATE TABLE Esta
+(
+  IdUser INT NOT NULL,
+  IdComunidad INT NOT NULL,
+  PRIMARY KEY (IdUser, IdComunidad),
+  FOREIGN KEY (IdUser) REFERENCES User(IdUser),
+  FOREIGN KEY (IdComunidad) REFERENCES Comunidad(IdComunidad)
+);
+
+CREATE TABLE Agrega
+(
+  IdUser_1 INT NOT NULL,
+  AgregaIdUser_2 INT NOT NULL,
+  PRIMARY KEY (IdUser_1, AgregaIdUser_2),
+  FOREIGN KEY (IdUser_1) REFERENCES User(IdUser),
+  FOREIGN KEY (AgregaIdUser_2) REFERENCES User(IdUser)
+);
